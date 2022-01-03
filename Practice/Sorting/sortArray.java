@@ -6,8 +6,11 @@ public class sortArray {
         
         getArrayInput arr = new getArrayInput();
         int[] myArr = arr.getArray();
-        // bubbleSort bubble = new bubbleSort(myArr);
+        bubbleSort bubble = new bubbleSort(myArr);
         insertionSort insert = new insertionSort(myArr);
-        insert.display();
+        selectionSort select = new selectionSort(myArr);
+        // bubble.display();
+        // insert.display();
+        select.display();
     }
 }
