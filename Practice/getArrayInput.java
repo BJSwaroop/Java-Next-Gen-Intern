@@ -1,5 +1,5 @@
 package Practice;
-
+// how to use this method. just create a new method named getarrayinput then call get array method.
 import java.util.Scanner;
 
 public class getArrayInput {

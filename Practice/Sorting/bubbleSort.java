@@ -1,8 +1,10 @@
 package Practice.Sorting;
 
+//  class
 public class bubbleSort {
     int[] arr;
     int n;
+    // constructor
     public bubbleSort(int[] arr){
         this.arr = arr;
     }
