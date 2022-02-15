@@ -5,19 +5,18 @@ public class fibonacci{
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        System.out.println("0\n1");
-        fib(n,0,1);
+        System.out.println(fib(n));;
         sc.close();
     }
+ 
+    private static int fib(int n) {
 
-    private static void fib(int n,int a,int b) {
-
-        if(n==2){
-            
+        if(n==0 || n==1){
+            return n;
         }
         else{
-            System.out.println(a+b);
-            fib(n-1,b,a+b);
+            return fib(n-1) + fib(n-2);
         }
+        
     }
 }

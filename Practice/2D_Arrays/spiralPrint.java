@@ -20,11 +20,42 @@ public class spiralPrint {
                 arr[rows][cols] = sc.nextInt();
             }
         }
-        int time = (m%2 == 0 ) ? m/2 : (m+1)/2;
-        // for(int times = 0; times< time;times++){
+        int m1 = (m%2 == 0 ) ? m/2 : (m+1)/2;
+        int n1 = (n%2 == 0 ) ? n/2 : (n+1)/2;
+        int time = m1 < n1 ? m1 : n1;
+        int startCol=0,startRow=0,endCol=n-1,endRow=m-1;
+        for(int times = 0; times< time;times++){
+            
+            if(startCol == endCol && startRow == endRow){
+                System.out.print(arr[startCol][endRow]);
+                break;    
+            }
 
-        // }
-            System.out.println(time);
+            if(startCol > endCol || startRow>endRow){
+                break;
+            }
+            
+            for(int top = startCol;top<=endCol; top++){
+                System.out.print(arr[startRow][top]);
+            }
+            for(int right = startRow+1;right<=endRow-1; right++){
+                if(n>1){
+                    System.out.print(arr[right][endCol]);
+                }
+            }
+            for(int bottom = endCol;bottom>=startCol; bottom--){
+                if(m>1){
+                    System.out.print(arr[endRow][bottom]);
+                }
+            }
+            for(int left = endRow-1;left>=startRow+1; left--){
+                System.out.print(arr[left][startCol]);
+            }
+            startCol++;
+            startRow++;
+            endCol--;
+            endRow--;
+        }
         sc.close();
     }
 

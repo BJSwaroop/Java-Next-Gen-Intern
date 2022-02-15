@@ -1,3 +1,16 @@
+/*
+In binary search we are provided with a sorted array and we have to search for required element.
+
+Algortihm:
+    take an array and consider start, end and mid. mid = start + (end - start) /2
+    then divide the array into half then perform the search in the required half
+    finally our recursion stops when the arr[mid] equals to the required element
+
+ways: 
+    1. Loop
+    2. Recursion
+*/
+
 package Practice;
 import java.util.Scanner; 
 public class binarySearch
@@ -20,6 +33,7 @@ public class binarySearch
     k = sc.nextInt();
     while(low <= high){
         
+        // dont prefer mid like this it might lead to error when low or high are in the ranges of Integer limits. prefer mid = s + (e-s)/2
         mid1 = (low + high)/2;
         int mid = mid1;
         if(myArr[mid] == k){

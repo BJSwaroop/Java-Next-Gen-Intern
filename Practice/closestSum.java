@@ -1,5 +1,8 @@
-package Practice;
+/*
 
+
+*/
+package Practice;
 import java.util.Scanner;
 
 public class closestSum {
